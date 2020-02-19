@@ -51,8 +51,11 @@ public class PathEditor : Editor
                 _path.PointObjects.Add(newObjPoint);
             }
         }
-
         ObjectSync();
+        if (UnityEngine.GUI.changed)
+        {
+            SetObjectDirty(_path.gameObject);
+        }
     }
     private void VisualEdit()
     {
@@ -142,5 +145,10 @@ public class PathEditor : Editor
             array[i] = EditorGUIUtility.IconContent(baseName + (startIndex + i) + postFix);
         }
         return array;
+    }
+    private void SetObjectDirty(UnityEngine.GameObject dirtyObject)
+    {
+        UnityEditor.EditorUtility.SetDirty(dirtyObject);
+        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(dirtyObject.scene);
     }
 }
