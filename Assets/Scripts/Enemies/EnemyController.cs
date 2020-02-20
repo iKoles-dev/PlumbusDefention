@@ -76,7 +76,7 @@ namespace Assets.Scripts
                 {
                     break;
                 }
-                //TODO: attack castle
+                Player.Instance.ApplyDamage(_enemy.AttackStrength);
                 _state = EnemyStates.Idle;
             }
         }

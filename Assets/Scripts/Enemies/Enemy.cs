@@ -14,6 +14,7 @@ namespace Assets.Scripts
         public Sprite EnemyImage;
         public string Name;
         public int Health;
+        public int AttackStrength;
         public float AttackSpeed;
         public float MoveSpeed;
         public AnimatorController EnemyAnimator;

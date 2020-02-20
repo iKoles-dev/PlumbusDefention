@@ -63,6 +63,7 @@ namespace Assets.Editors
             _wave.EnemiesInWave[index].TimeBetweenSpawns = EditorGUILayout.FloatField("Time between spawns", _wave.EnemiesInWave[index].TimeBetweenSpawns);
             _wave.EnemiesInWave[index].TimeToNextEnemies = EditorGUILayout.FloatField("Time to next enemies", _wave.EnemiesInWave[index].TimeToNextEnemies);
             GUILayout.Label($"Speed: {_wave.EnemiesInWave[index].CurrentEnemy.MoveSpeed}",_cursive);
+            GUILayout.Label($"Attack Strenght: {_wave.EnemiesInWave[index].CurrentEnemy.AttackStrength}", _cursive);
             GUILayout.Label($"Attack Speed: {_wave.EnemiesInWave[index].CurrentEnemy.AttackSpeed}", _cursive);
             GUILayout.Label($"Health: {_wave.EnemiesInWave[index].CurrentEnemy.Health}", _cursive);
             GUILayout.EndVertical();
