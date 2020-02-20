@@ -9,19 +9,19 @@ using UnityEngine;
 
 namespace Assets.Editors
 {
-    [CustomEditor(typeof(EnemyСharacteristics))]
+    [CustomEditor(typeof(Enemy))]
     class EnemyEditor : Editor
     {
-        private EnemyСharacteristics _enemyСharacteristics;
+        private Enemy _enemy;
         private void OnEnable()
         {
-            _enemyСharacteristics = (EnemyСharacteristics) target;
+            _enemy = (Enemy) target;
         }
         public override void OnInspectorGUI()
         {
-            if (_enemyСharacteristics.EnemyImage != null)
+            if (_enemy.EnemyImage != null)
             {
-                var texture = AssetPreview.GetAssetPreview(_enemyСharacteristics.EnemyImage);
+                var texture = AssetPreview.GetAssetPreview(_enemy.EnemyImage);
                 GUILayout.Label(texture);
             }
             DrawDefaultInspector();

@@ -8,13 +8,13 @@ namespace Assets.Scripts
     public class EnemyController : MonoBehaviour
     {
         public EnemyStates _state;
-        private EnemyСharacteristics _enemyСharacteristics;
+        private Enemy _enemy;
         private List<Vector3> _path = new List<Vector3>();
         private int _currentPathPoint = 0;
-        public void SetСharacteristics(EnemyСharacteristics enemyСharacteristics, List<Vector3> pathPoints)
+        public void SetСharacteristics(Enemy enemy, List<Vector3> pathPoints)
         {
             _path = pathPoints;
-            _enemyСharacteristics = enemyСharacteristics;
+            _enemy = enemy;
             transform.position = _path[0];
             _state = EnemyStates.Walk;
             StartCoroutine(Walk());
@@ -24,7 +24,7 @@ namespace Assets.Scripts
         {
             while (true)
             {
-                Vector3.MoveTowards(transform.position, _path[_currentPathPoint], _enemyСharacteristics.MoveSpeed);
+                Vector3.MoveTowards(transform.position, _path[_currentPathPoint], _enemy.MoveSpeed);
                 yield return new WaitForEndOfFrame();
             }
         }

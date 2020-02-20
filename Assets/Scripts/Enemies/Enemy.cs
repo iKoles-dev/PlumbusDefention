@@ -8,8 +8,8 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    [CreateAssetMenu(fileName = "EnemyСharacteristics", menuName = "Create EnemyСharacteristics", order = 51)]
-    public class EnemyСharacteristics : ScriptableObject
+    [CreateAssetMenu(fileName = "Enemy", menuName = "Create Enemy", order = 51)]
+    public class Enemy : ScriptableObject
     {
         public Sprite EnemyImage;
         public string Name;

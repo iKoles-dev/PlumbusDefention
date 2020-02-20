@@ -1,7 +1,12 @@
-﻿namespace Assets.Scripts
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+namespace Assets.Scripts
 {
-    public class Wave
+    [CreateAssetMenu(fileName = "Wave", menuName = "Create Wave", order = 52)]
+    public class Wave : ScriptableObject
     {
-        
+        public float TimeToNextWave;
+        public List<EnemiesProperties> EnemiesInWave = new List<EnemiesProperties>();
     }
 }
