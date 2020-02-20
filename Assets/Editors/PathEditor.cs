@@ -6,33 +6,32 @@ using Assets.Scripts;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Path))]
+[CustomEditor(typeof(PathCreator))]
 public class PathEditor : Editor
 {
-    private Path _path;
+    private PathCreator _pathCreator;
 
     private void OnEnable()
     {
-        _path = (Path) target;
+        _pathCreator = (PathCreator) target;
     }
-
     public override void OnInspectorGUI()
     {
         VisualEdit();
         PointSync();
-        EditorGUILayout.LabelField("Path Editor");
-        for (int i = 0; i < _path.PathPoints.Count; i++)
+        EditorGUILayout.LabelField("PathCreator Editor");
+        for (int i = 0; i < _pathCreator.PathPoints.Count; i++)
         {
             GUILayout.BeginVertical("box");
             EditorGUILayout.LabelField($"Point #{i+1}");
-            _path.PathPoints[i] = EditorGUILayout.Vector3Field("Position", _path.PathPoints[i]);
+            _pathCreator.PathPoints[i] = EditorGUILayout.Vector3Field("Position", _pathCreator.PathPoints[i]);
             if (GUILayout.Button("Delete Point", GUILayout.Width(300)))
             {
-                _path.PathPoints.RemoveAt(i);
-                if (_path.IsManualEdit)
+                _pathCreator.PathPoints.RemoveAt(i);
+                if (_pathCreator.IsManualEdit)
                 {
-                    DestroyImmediate(_path.PointObjects[i]);
-                    _path.PointObjects.RemoveAt(i);
+                    DestroyImmediate(_pathCreator.PointObjects[i]);
+                    _pathCreator.PointObjects.RemoveAt(i);
                     RenameObjectPoints();
                 }
                 break;
@@ -41,29 +40,29 @@ public class PathEditor : Editor
         }
         if (GUILayout.Button("Add New Point", GUILayout.Width(300)))
         {
-            _path.PathPoints.Add(Vector3.zero);
-            if (_path.IsManualEdit)
+            _pathCreator.PathPoints.Add(Vector3.zero);
+            if (_pathCreator.IsManualEdit)
             {
                 GameObject newObjPoint = new GameObject();
-                newObjPoint.transform.parent = _path.transform;
-                newObjPoint.transform.name = $"Point #{_path.PathPoints.Count}";
+                newObjPoint.transform.parent = _pathCreator.transform;
+                newObjPoint.transform.name = $"Point #{_pathCreator.PathPoints.Count}";
                 DrawIcon(newObjPoint, 0);
-                _path.PointObjects.Add(newObjPoint);
+                _pathCreator.PointObjects.Add(newObjPoint);
             }
         }
         ObjectSync();
         if (UnityEngine.GUI.changed)
         {
-            SetObjectDirty(_path.gameObject);
+            SetObjectDirty(_pathCreator.gameObject);
         }
     }
     private void VisualEdit()
     {
-        if (!_path.IsManualEdit)
+        if (!_pathCreator.IsManualEdit)
         {
             if (GUILayout.Button("Enable Visual Edit", GUILayout.Width(300)))
             {
-                _path.IsManualEdit = true;
+                _pathCreator.IsManualEdit = true;
                 CreatePathPoints();
             }
         }
@@ -71,61 +70,60 @@ public class PathEditor : Editor
         {
             if (GUILayout.Button("Disable Visual Edit", GUILayout.Width(300)))
             {
-                _path.IsManualEdit = false;
+                _pathCreator.IsManualEdit = false;
                 DeletePathPoints();
             }
         }
     }
-
     private void RenameObjectPoints()
     {
-        for (int i = 0; i < _path.PointObjects.Count; i++)
+        for (int i = 0; i < _pathCreator.PointObjects.Count; i++)
         {
-            _path.PointObjects[i].transform.name = $"Point #{i + 1}";
+            _pathCreator.PointObjects[i].transform.name = $"Point #{i + 1}";
         }
     }
     private void PointSync()
     {
-        if (!_path.IsManualEdit)
+        if (!_pathCreator.IsManualEdit)
         {
             return;
         }
-        for (int i = 0; i < _path.PointObjects.Count; i++)
+        for (int i = 0; i < _pathCreator.PointObjects.Count; i++)
         {
-            _path.PathPoints[i] = _path.PointObjects[i].transform.position;
+            _pathCreator.PathPoints[i] = _pathCreator.PointObjects[i].transform.position;
         }
     }
     private void ObjectSync()
     {
-        if (!_path.IsManualEdit)
+        if (!_pathCreator.IsManualEdit)
         {
             return;
         }
-        for (int i = 0; i < _path.PathPoints.Count; i++)
+        for (int i = 0; i < _pathCreator.PathPoints.Count; i++)
         {
-            _path.PointObjects[i].transform.position = _path.PathPoints[i];
+            _pathCreator.PointObjects[i].transform.position = _pathCreator.PathPoints[i];
         }
     }
     private void CreatePathPoints()
     {
         int number = 1;
-        _path.PathPoints.ForEach(point =>
+        _pathCreator.PathPoints.ForEach(point =>
         {
             GameObject pathPoint = new GameObject();
             pathPoint.transform.position = point;
-            pathPoint.transform.parent = _path.transform;
+            pathPoint.transform.parent = _pathCreator.transform;
             pathPoint.transform.name = $"Point #{number++}";
-            _path.PointObjects.Add(pathPoint);
+            _pathCreator.PointObjects.Add(pathPoint);
             DrawIcon(pathPoint,0);
         });
     }
     private void DeletePathPoints()
     {
-        _path.PointObjects.ForEach(point =>
+        _pathCreator.PointObjects.ForEach(point =>
         {
             DestroyImmediate(point);
         });
-        _path.PointObjects.Clear();
+        _pathCreator.PointObjects.Clear();
     }
     private void DrawIcon(GameObject gameObject, int idx)
     {

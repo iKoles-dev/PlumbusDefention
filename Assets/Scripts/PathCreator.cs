@@ -8,12 +8,11 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    [ExecuteInEditMode]
-    class Path : MonoBehaviour
+    class PathCreator : MonoBehaviour
     {
-        public List<Vector3> PathPoints = new List<Vector3>();
-        public bool IsManualEdit = false;
-        public List<GameObject> PointObjects = new List<GameObject>();
+        [HideInInspector] public List<Vector3> PathPoints = new List<Vector3>();
+        [HideInInspector] public bool IsManualEdit = false;
+        [HideInInspector] public List<GameObject> PointObjects = new List<GameObject>();
         private void OnDrawGizmos()
         {
             if (PointObjects.Count < 2)
