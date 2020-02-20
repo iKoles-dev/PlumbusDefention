@@ -10,7 +10,12 @@ namespace Assets.Scripts
         public EnemyStates _state;
         private Enemy _enemy;
         private List<Vector3> _path = new List<Vector3>();
-        private int _currentPathPoint = 0;
+        private int _currentPathPoint = 1;
+        private Transform _transform;
+        private void Awake()
+        {
+            _transform = transform;
+        }
         public void SetСharacteristics(Enemy enemy, List<Vector3> pathPoints)
         {
             _path = pathPoints;
@@ -24,7 +29,7 @@ namespace Assets.Scripts
         {
             while (true)
             {
-                Vector3.MoveTowards(transform.position, _path[_currentPathPoint], _enemy.MoveSpeed);
+                _transform.position = Vector3.MoveTowards(transform.position, _path[_currentPathPoint], _enemy.MoveSpeed/500);
                 yield return new WaitForEndOfFrame();
             }
         }

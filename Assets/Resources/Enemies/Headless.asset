@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f98d1bbc1486254582c2a443fb1ad2e, type: 3}
-  m_Name: Enemy
+  m_Name: Headless
   m_EditorClassIdentifier: 
-  EnemyImage: {fileID: 0}
-  Name: 
-  Health: 0
-  AttackSpeed: 0
-  MoveSpeed: 0
-  EnemyAnimator: {fileID: 0}
+  EnemyImage: {fileID: 21300000, guid: 450c93c5f32aed74c92315070428df05, type: 3}
+  Name: Headless
+  Health: 10
+  AttackSpeed: 1
+  MoveSpeed: 1
+  EnemyAnimator: {fileID: 9100000, guid: a10043eb609c68644ab0c2a53fd567fa, type: 2}
