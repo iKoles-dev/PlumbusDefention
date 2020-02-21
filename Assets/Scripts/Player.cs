@@ -24,7 +24,7 @@ public class Player : ModifiedSingleton<Player>
         _healthText.text = _playerHealth.ToString();
     }
 
-    public void AddMoney(int amount)
+    public void ChangeMoney(int amount)
     {
         PlayerMoney += amount;
     }

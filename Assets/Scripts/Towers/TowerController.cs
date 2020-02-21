@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.Towers
 {
-    public class TowerController : MonoBehaviour
+    public class TowerController : MonoBehaviour, IPointerDownHandler
     {
+        [SerializeField] private GameObject _upgradeMenu;
         private BasicTower _towerControl;
-        private Tower _tower;
-        private int _level = 0;
+        [HideInInspector] public Tower CurrentTower;
+        public int Level = 0;
         private List<EnemyController> _enemiesInRange = new List<EnemyController>();
         private Transform _currentPosition;
 
@@ -19,14 +21,14 @@ namespace Assets.Scripts.Towers
         }
         public void AddTowerPreferences(Tower tower)
         {
-            _tower = tower;
-            GetComponent<CircleCollider2D>().radius = _tower.Upgrades[_level].Range;
+            CurrentTower = tower;
+            GetComponent<CircleCollider2D>().radius = CurrentTower.Upgrades[Level].Range;
             StartCoroutine(TrackAndShoot());
         }
         public void SellTower()
         {
             Instantiate(Player.Instance.TowerSpotPrefab, transform.position, Quaternion.identity);
-            Player.Instance.AddMoney(_tower.Upgrades[_level].SellCost);
+            Player.Instance.ChangeMoney(CurrentTower.Upgrades[Level].SellCost);
             Destroy(gameObject);
         }
 
@@ -38,9 +40,9 @@ namespace Assets.Scripts.Towers
                 EnemyController nearestEnemy = GetNearestEnemy();
                 if (nearestEnemy != null)
                 {
-                    _towerControl.Shoot(nearestEnemy,_tower.Upgrades[_level].Damage, _tower.Upgrades[_level].DamageRadius);
+                    _towerControl.Shoot(nearestEnemy,CurrentTower.Upgrades[Level].Damage, CurrentTower.Upgrades[Level].DamageRadius);
                 }
-                yield return new WaitForSeconds(_tower.Upgrades[_level].ShootInterval);
+                yield return new WaitForSeconds(CurrentTower.Upgrades[Level].ShootInterval);
             }
         }
         private void ClearEnemyListFromNull()
@@ -79,7 +81,6 @@ namespace Assets.Scripts.Towers
             }
 
         }
-        
         private void OnTriggerEnter2D(Collider2D enteredCollider)
         {
             if (enteredCollider.GetComponent<EnemyController>()!=null)
@@ -95,5 +96,9 @@ namespace Assets.Scripts.Towers
             }
         }
 
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            _upgradeMenu.SetActive(true);
+        }
     }
 }

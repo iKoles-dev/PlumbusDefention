@@ -17,5 +17,5 @@ MonoBehaviour:
   Health: 10
   AttackStrength: 1
   AttackSpeed: 1
-  MoveSpeed: 5
+  MoveSpeed: 10
   EnemyAnimator: {fileID: 9100000, guid: a10043eb609c68644ab0c2a53fd567fa, type: 2}
