@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
         GameObject currentEnemy = Instantiate(_enemyPrefab);
         currentEnemy.transform.parent = transform;
         currentEnemy.GetComponent<SpriteRenderer>().sprite = enemy.EnemyImage;
-        currentEnemy.GetComponent<Animator>().runtimeAnimatorController = enemy.EnemyAnimator;
+        currentEnemy.GetComponent<Animator>().runtimeAnimatorController = enemy.EnemyAnimator.GetComponent<Animator>().runtimeAnimatorController;
         currentEnemy.GetComponent<EnemyController>().SetСharacteristics(enemy,_pathCreator.PathPoints);
     }
 }

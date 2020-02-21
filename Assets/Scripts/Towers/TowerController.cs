@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Enums;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,9 +9,11 @@ namespace Assets.Scripts.Towers
     public class TowerController : MonoBehaviour, IPointerDownHandler
     {
         [SerializeField] private GameObject _upgradeMenu;
+        [SerializeField] private Transform _range;
+        private Vector3 _rangeScale = new Vector3(0.4f, 0.4f, 0.4f);
         private BasicTower _towerControl;
         [HideInInspector] public Tower CurrentTower;
-        public int Level = 0;
+        public int Level;
         private List<EnemyController> _enemiesInRange = new List<EnemyController>();
         private Transform _currentPosition;
 
@@ -23,6 +26,7 @@ namespace Assets.Scripts.Towers
         {
             CurrentTower = tower;
             GetComponent<CircleCollider2D>().radius = CurrentTower.Upgrades[Level].Range;
+            _range.localScale = _rangeScale * CurrentTower.Upgrades[Level].Range;
             StartCoroutine(TrackAndShoot());
         }
         public void SellTower()
@@ -66,13 +70,21 @@ namespace Assets.Scripts.Towers
                 float nearestDistance = Vector3.Distance(_currentPosition.position, nearestEnemy.transform.position);
                 _enemiesInRange.ForEach(enemy =>
                 {
-                    float newDistance = Vector3.Distance(_currentPosition.position, enemy.transform.position);
-                    if (newDistance < nearestDistance)
+
+                    if (enemy.State != EnemyStates.Die)
                     {
-                        nearestEnemy = enemy;
-                        nearestDistance = newDistance;
+                        float newDistance = Vector3.Distance(_currentPosition.position, enemy.transform.position);
+                        if (newDistance < nearestDistance)
+                        {
+                            nearestEnemy = enemy;
+                            nearestDistance = newDistance;
+                        }
                     }
                 });
+                if (nearestEnemy.State == EnemyStates.Die)
+                {
+                    return null;
+                }
                 return nearestEnemy;
             }
             else
@@ -100,5 +112,20 @@ namespace Assets.Scripts.Towers
         {
             _upgradeMenu.SetActive(true);
         }
+
+        public void Upgrade()
+        {
+            Level++;
+            if (CurrentTower.LevelToFirstUpgrade <= Level + 1)
+            {
+                GetComponent<SpriteRenderer>().sprite = CurrentTower.SecondTowerUpgrade;
+            }
+            else if (CurrentTower.LevelToSecondUpgrade <= Level + 1)
+            {
+                GetComponent<SpriteRenderer>().sprite = CurrentTower.ThirdTowerUpgrade;
+            }
+            _range.localScale = _rangeScale * CurrentTower.Upgrades[Level].Range;
+        }
+        
     }
 }

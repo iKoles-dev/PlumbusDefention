@@ -21,7 +21,7 @@ public class UpgradeMenu : MonoBehaviour
     public void Upgrade()
     {
         Player.Instance.ChangeMoney(-_towerController.CurrentTower.Upgrades[_towerController.Level+1].Cost);
-        _towerController.Level++;
+        _towerController.Upgrade();
         RefreshParametres();
     }
 

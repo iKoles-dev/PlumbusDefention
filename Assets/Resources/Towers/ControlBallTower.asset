@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bd761339b471a4da9da708d175cfd5, type: 3}
+  m_Name: ControlBallTower
+  m_EditorClassIdentifier: 
+  FirstTowerUpgrade: {fileID: 21300000, guid: 2220db66714220f4f94ff5a44adace0b, type: 3}
+  SecondTowerUpgrade: {fileID: 21300000, guid: 206b798d4d957154e9fd19932493e5e4, type: 3}
+  LevelToFirstUpgrade: 5
+  ThirdTowerUpgrade: {fileID: 21300000, guid: 78124a85ded1c1546b8a9a17fcd371f9, type: 3}
+  LevelToSecondUpgrade: 10
+  Upgrades:
+  - Cost: 100
+    Range: 3
+    ShootInterval: 4
+    Damage: 3
+    DamageRadius: 1
+    SellCost: 50
+  - Cost: 150
+    Range: 3.2
+    ShootInterval: 3.8
+    Damage: 4
+    DamageRadius: 1.1
+    SellCost: 75
+  - Cost: 200
+    Range: 3.4
+    ShootInterval: 3.6
+    Damage: 5
+    DamageRadius: 1.2
+    SellCost: 100
+  - Cost: 250
+    Range: 3.8
+    ShootInterval: 3.4
+    Damage: 6
+    DamageRadius: 1.4
+    SellCost: 125
+  - Cost: 300
+    Range: 4
+    ShootInterval: 3.2
+    Damage: 7
+    DamageRadius: 1.5
+    SellCost: 150
+  - Cost: 400
+    Range: 4.3
+    ShootInterval: 3
+    Damage: 8
+    DamageRadius: 1.6
+    SellCost: 200
+  - Cost: 500
+    Range: 4.5
+    ShootInterval: 2.8
+    Damage: 9
+    DamageRadius: 1.7
+    SellCost: 250
+  - Cost: 600
+    Range: 4.6
+    ShootInterval: 2.6
+    Damage: 10
+    DamageRadius: 1.8
+    SellCost: 300
+  - Cost: 700
+    Range: 4.8
+    ShootInterval: 2.4
+    Damage: 11
+    DamageRadius: 1.9
+    SellCost: 350
+  - Cost: 800
+    Range: 5
+    ShootInterval: 2
+    Damage: 12
+    DamageRadius: 2
+    SellCost: 400
+  ShootAnimation: {fileID: 0}
+  TowerPrefab: {fileID: 0}
+  BuyingCost: 100

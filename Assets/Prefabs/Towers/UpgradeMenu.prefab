@@ -704,10 +704,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9049019507514077956}
+  - component: {fileID: 9049019507514077952}
   - component: {fileID: 9049019507514077957}
   - component: {fileID: 9049019507514077954}
   - component: {fileID: 9049019507514077955}
-  - component: {fileID: 9049019507514077952}
   m_Layer: 5
   m_Name: UpgradeMenu
   m_TagString: Untagged
@@ -732,9 +732,25 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.89, y: -0.85}
+  m_AnchoredPosition: {x: 2.8900146, y: -0.8499756}
   m_SizeDelta: {x: 1920, y: 2775.734}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9049019507514077952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049019507514077953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7059c01e377965408f6ddb5a0684e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentUpgradeLevel: {fileID: 9049019506774877061}
+  _upgradeCost: {fileID: 9049019507136758311}
+  _upgradeButton: {fileID: 9049019506838232563}
+  _sellCost: {fileID: 9049019507610142692}
 --- !u!223 &9049019507514077957
 Canvas:
   m_ObjectHideFlags: 0
@@ -795,22 +811,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &9049019507514077952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9049019507514077953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7059c01e377965408f6ddb5a0684e34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentUpgradeLevel: {fileID: 9049019506774877061}
-  _upgradeCost: {fileID: 9049019507136758311}
-  _upgradeButton: {fileID: 9049019506838232563}
-  _sellCost: {fileID: 9049019507610142692}
 --- !u!1 &9049019507610142693
 GameObject:
   m_ObjectHideFlags: 0

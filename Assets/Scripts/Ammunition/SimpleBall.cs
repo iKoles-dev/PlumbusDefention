@@ -34,9 +34,9 @@ namespace Assets.Scripts.Ammunition
             Collider2D[] allEnimiesInRange = Physics2D.OverlapCircleAll(_transform.position, _radius);
             foreach (var enemy in allEnimiesInRange)
             {
-                if (enemy.GetComponent<EnemyController>() != null && enemy.GetComponent<EnemyController>()._state != EnemyStates.Die)
+                if (enemy.GetComponent<EnemyController>() != null && enemy.GetComponent<EnemyController>().State != EnemyStates.Die)
                 {
-                    enemy.GetComponent<EnemyController>().ApplyDamage(_damage);
+                    enemy.GetComponent<EnemyController>().ApplyDamage((int)_damage);
                 }
             }
             Destroy(gameObject);

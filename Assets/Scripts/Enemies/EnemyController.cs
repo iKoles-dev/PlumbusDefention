@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Enums;
+using TMPro;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class EnemyController : MonoBehaviour
     {
-        public EnemyStates _state;
+        public EnemyStates State;
+        [SerializeField] private TextMeshProUGUI _healthText;
+        [SerializeField] private GameObject _healthPanel;
         private Enemy _enemy;
         private List<Vector3> _path = new List<Vector3>();
         private int _currentPathPoint = 0;
@@ -15,7 +18,7 @@ namespace Assets.Scripts
         private Vector3 _halfHeight;
         private Vector3 GetNextPoint => _path[_currentPathPoint] + _halfHeight;
         private Animator _animator;
-        private float _health;
+        private int _health;
         private SpriteRenderer _spriteRenderer;
         private void Awake()
         {
@@ -30,8 +33,12 @@ namespace Assets.Scripts
             _enemy = enemy;
             transform.position = GetNextPoint;
             _currentPathPoint++;
-            _state = EnemyStates.Walk;
+            State = EnemyStates.Walk;
             _health = _enemy.Health;
+
+            _healthPanel.transform.localPosition = _halfHeight*2;
+            _healthText.text = _enemy.Health.ToString();
+
             StartCoroutine(Walk());
         }
 
@@ -39,14 +46,14 @@ namespace Assets.Scripts
         {
             ChangeSpriteFlip();
             SetAnimation();
-            while (_state == EnemyStates.Walk)
+            while (State == EnemyStates.Walk)
             {
                 _transform.position = Vector3.MoveTowards(transform.position, GetNextPoint, _enemy.MoveSpeed/500);
                 if (_transform.position == GetNextPoint)
                 {
                     if (_path.Count <= _currentPathPoint+1)
                     {
-                        _state = EnemyStates.Idle;
+                        State = EnemyStates.Idle;
                         StartCoroutine(Attack());
                     }
                     else
@@ -60,62 +67,64 @@ namespace Assets.Scripts
         }
         private IEnumerator Attack()
         {
-            while (_state == EnemyStates.Idle || _state == EnemyStates.Attack)
+            while (State == EnemyStates.Idle || State == EnemyStates.Attack)
             {
                 SetAnimation();
                 yield return new WaitForSeconds(_enemy.AttackSpeed);
-                if (_state == EnemyStates.Die)
+                if (State == EnemyStates.Die)
                 {
                     break;
                 }
 
-                _state = EnemyStates.Attack;
+                State = EnemyStates.Attack;
                 SetAnimation();
                 yield return new WaitForSeconds(1); //Attack animation duration
-                if (_state == EnemyStates.Die)
+                if (State == EnemyStates.Die)
                 {
                     break;
                 }
                 Player.Instance.ApplyDamage(_enemy.AttackStrength);
-                _state = EnemyStates.Idle;
+                State = EnemyStates.Idle;
             }
         }
-        public void ApplyDamage(float damage)
+        public void ApplyDamage(int damage)
         {
             if (_health - damage <= 0)
             {
                 _health = 0;
-                _state = EnemyStates.Die;
+                State = EnemyStates.Die;
                 StartCoroutine(Die());
             }
             else
             {
                 _health -= damage;
-                if (_state == EnemyStates.Walk)
+                if (State == EnemyStates.Walk)
                 {
                     StartCoroutine(Damage());
                 }
             }
+            _healthText.text = ((int)_health).ToString();
         }
         private IEnumerator Damage()
         {
             SetAnimation();
             yield return new WaitForSeconds(1);
-            if (_state != EnemyStates.Die)
+            if (State != EnemyStates.Die)
             {
-                _state = EnemyStates.Walk;
+                State = EnemyStates.Walk;
                 StartCoroutine(Walk());
             }
         }
         private IEnumerator Die()
         {
             SetAnimation();
+            Player.Instance.ChangeMoney(_enemy.Health/3);
             yield return new WaitForSeconds(1);
             Destroy(gameObject);
         }
         private void SetAnimation()
         {
-            _animator.SetTrigger(_state.ToString());
+            _animator.SetTrigger(State.ToString());
         }
         private void ChangeSpriteFlip()
         {

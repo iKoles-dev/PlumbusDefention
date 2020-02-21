@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    class PathCreator : MonoBehaviour
+    public class PathCreator : MonoBehaviour
     {
         [HideInInspector] public List<Vector3> PathPoints = new List<Vector3>();
         [HideInInspector] public bool IsManualEdit = false;
