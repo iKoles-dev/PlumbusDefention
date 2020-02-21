@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using Assets;
 using Assets.Scripts;
+using TMPro;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private PathCreator _pathCreator;
-    [HideInInspector] public Event OnSpawnEnd;
+    [HideInInspector] public delegate void OnSpawnEndHandler();
+    [HideInInspector] public event OnSpawnEndHandler OnSpawnEnd;
 
     public IEnumerator Spawn(EnemiesProperties enemiesProperties)
     {
@@ -17,6 +19,7 @@ public class Spawner : MonoBehaviour
             CreateEnemy(enemiesProperties.CurrentEnemy);
             yield return new WaitForSeconds(enemiesProperties.TimeBetweenSpawns);
         }
+        OnSpawnEnd?.Invoke();
     }
 
     private void CreateEnemy(Enemy enemy)

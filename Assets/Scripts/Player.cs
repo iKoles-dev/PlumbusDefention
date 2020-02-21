@@ -8,6 +8,7 @@ public class Player : ModifiedSingleton<Player>
 {
     public GameObject TowerSpotPrefab;
     [SerializeField] private TextMeshProUGUI _healthText;
+    [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private int _playerHealth = 100;
     public int PlayerMoney { get; private set; } = 100;
 
@@ -27,5 +28,6 @@ public class Player : ModifiedSingleton<Player>
     public void ChangeMoney(int amount)
     {
         PlayerMoney += amount;
+        _moneyText.text = PlayerMoney.ToString();
     }
 }
