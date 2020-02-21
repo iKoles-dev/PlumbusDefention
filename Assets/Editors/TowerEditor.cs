@@ -24,7 +24,7 @@ namespace Assets.Editors
             GUILayout.BeginVertical("box");
             _tower.BuyingCost = EditorGUILayout.IntField("Bying Cost", _tower.BuyingCost);
             _tower.ShootAnimation = (Animator)EditorGUILayout.ObjectField("Shoot Animation",_tower.ShootAnimation, typeof(Animator), false);
-            _tower.TowerBehaviour = (BasicTower)EditorGUILayout.ObjectField("Tower Behaviour",_tower.TowerBehaviour, typeof(BasicTower), false);
+            _tower.TowerPrefab = (GameObject)EditorGUILayout.ObjectField("Tower Prefab",_tower.TowerPrefab, typeof(GameObject), false);
             GUILayout.EndVertical();
             SetUpgrades();
             serializedObject.ApplyModifiedProperties();
@@ -96,10 +96,11 @@ namespace Assets.Editors
                 GUILayout.BeginVertical(_brightBackground);
                 GUILayout.Label($"Upgrade Level #{i+1}{(i==0 ? " (Basic)" :"")}",_centeredText);
                 _tower.Upgrades[i].Cost = EditorGUILayout.IntField("Cost", _tower.Upgrades[i].Cost);
-                _tower.Upgrades[i].SellCost = EditorGUILayout.IntField("Cost", _tower.Upgrades[i].SellCost);
+                _tower.Upgrades[i].SellCost = EditorGUILayout.IntField("Sell Cost", _tower.Upgrades[i].SellCost);
                 _tower.Upgrades[i].Range = EditorGUILayout.FloatField("Attack Range", _tower.Upgrades[i].Range);
                 _tower.Upgrades[i].ShootInterval = EditorGUILayout.FloatField("Shoot Interval", _tower.Upgrades[i].ShootInterval);
                 _tower.Upgrades[i].Damage = EditorGUILayout.FloatField("Damage", _tower.Upgrades[i].Damage);
+                _tower.Upgrades[i].DamageRadius = EditorGUILayout.FloatField("Damage Radius", _tower.Upgrades[i].DamageRadius);
 
                 GUILayout.BeginHorizontal(_brightBackground);
                 GUILayout.FlexibleSpace();

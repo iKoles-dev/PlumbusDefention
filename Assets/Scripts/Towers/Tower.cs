@@ -12,8 +12,8 @@ public class Tower : ScriptableObject
     public Sprite ThirdTowerUpgrade;
     public int LevelToSecondUpgrade;
     public List<TowerUpgrades> Upgrades = new List<TowerUpgrades>();
-    public Animator ShootAnimation = null;
-    public BasicTower TowerBehaviour;
+    public Animator ShootAnimation;
+    public GameObject TowerPrefab;
     public int BuyingCost;
 
 }

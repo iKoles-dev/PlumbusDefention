@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class Player : ModifiedSingleton<Player>
 {
+    public GameObject TowerSpotPrefab;
     [SerializeField] private TextMeshProUGUI _healthText;
     [SerializeField] private int _playerHealth = 100;
-    [SerializeField] private int _playerMoney = 100;
+    public int PlayerMoney { get; private set; } = 100;
 
     public void ApplyDamage(int damage)
     {
@@ -21,5 +22,10 @@ public class Player : ModifiedSingleton<Player>
             _playerHealth -= damage;
         }
         _healthText.text = _playerHealth.ToString();
+    }
+
+    public void AddMoney(int amount)
+    {
+        PlayerMoney += amount;
     }
 }

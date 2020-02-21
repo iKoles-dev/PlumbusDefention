@@ -13,6 +13,7 @@ namespace Assets.Scripts.Towers
         public float Range;
         public float ShootInterval;
         public float Damage;
+        public float DamageRadius;
         public int SellCost;
     }
 }
