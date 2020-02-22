@@ -27,7 +27,7 @@ namespace Assets.Scripts.Ammunition
             while (target!=null && Vector3.Distance(_transform.position,target.position) > _radius/2)
             {
                 _transform.position = Vector3.MoveTowards(_transform.position, target.position, _speed / 100);
-                yield return new WaitForEndOfFrame();
+                yield return new WaitForFixedUpdate();
             }
 
             Collider2D[] allEnimiesInRange = Physics2D.OverlapCircleAll(_transform.position, _radius);
