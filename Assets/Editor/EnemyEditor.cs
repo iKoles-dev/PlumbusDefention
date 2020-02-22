@@ -26,6 +26,7 @@ namespace Assets.Editors
                 GUILayout.Label(texture);
             }
             DrawDefaultInspector();
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }

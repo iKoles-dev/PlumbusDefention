@@ -62,7 +62,7 @@ namespace Assets.Scripts
                         ChangeSpriteFlip();
                     }
                 }
-                yield return new WaitForEndOfFrame();
+                yield return new WaitForFixedUpdate();
             }
         }
         private IEnumerator Attack()
@@ -100,15 +100,16 @@ namespace Assets.Scripts
                 _health -= damage;
                 if (State == EnemyStates.Walk)
                 {
+                    State = EnemyStates.Damaged;
                     StartCoroutine(Damage());
                 }
             }
-            _healthText.text = ((int)_health).ToString();
+            _healthText.text = (_health).ToString();
         }
         private IEnumerator Damage()
         {
             SetAnimation();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.2f);
             if (State != EnemyStates.Die)
             {
                 State = EnemyStates.Walk;
@@ -118,7 +119,7 @@ namespace Assets.Scripts
         private IEnumerator Die()
         {
             SetAnimation();
-            Player.Instance.ChangeMoney(_enemy.Health/3);
+            Player.Instance.ChangeMoney(_enemy.Health/3+(Random.Range(0,2)-1)); //Money bonus
             yield return new WaitForSeconds(1);
             Destroy(gameObject);
         }

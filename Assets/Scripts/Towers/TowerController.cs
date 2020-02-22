@@ -45,8 +45,12 @@ namespace Assets.Scripts.Towers
                 if (nearestEnemy != null)
                 {
                     _towerControl.Shoot(nearestEnemy,CurrentTower.Upgrades[Level].Damage, CurrentTower.Upgrades[Level].DamageRadius);
+                    yield return new WaitForSeconds(CurrentTower.Upgrades[Level].ShootInterval);
                 }
-                yield return new WaitForSeconds(CurrentTower.Upgrades[Level].ShootInterval);
+                else
+                {
+                    yield return new WaitForFixedUpdate();
+                }
             }
         }
         private void ClearEnemyListFromNull()

@@ -28,6 +28,11 @@ namespace Assets.Editors
             _tower.TowerPrefab = (GameObject)EditorGUILayout.ObjectField("Tower Prefab",_tower.TowerPrefab, typeof(GameObject), false);
             GUILayout.EndVertical();
             SetUpgrades();
+            if (UnityEngine.GUI.changed)
+            {
+                EditorUtility.SetDirty(_tower);
+                UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(Player.Instance.gameObject.scene);
+            }
             serializedObject.ApplyModifiedProperties();
         }
 

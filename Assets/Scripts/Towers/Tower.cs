@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Towers;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Tower", menuName = "Create Tower", order = 53)]
+[Serializable]
 public class Tower : ScriptableObject
 {
     public Sprite FirstTowerUpgrade;

@@ -15,8 +15,8 @@ MonoBehaviour:
   EnemyImage: {fileID: 21300000, guid: 04b8221bfeef56843a2ee461d57c0508, type: 3}
   Name: Trident
   Health: 25
-  AttackStrength: 10
+  AttackStrength: 3
   AttackSpeed: 0.8
-  MoveSpeed: 2
+  MoveSpeed: 10
   EnemyAnimator: {fileID: 7316913620541104741, guid: 6a66f1fc26bcf9c4a9c9ddba47c31549,
     type: 3}
