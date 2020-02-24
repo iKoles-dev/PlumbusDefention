@@ -59,6 +59,7 @@ namespace Assets.Editors
             GUILayout.EndHorizontal();
             if (UnityEngine.GUI.changed)
             {
+                EditorUtility.SetDirty(_wave);
                 EditorSceneManager.MarkSceneDirty(Player.Instance.gameObject.scene);
             }
             serializedObject.ApplyModifiedProperties();

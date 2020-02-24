@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18b9e4085cf8184dab3367fe83f47d1, type: 3}
   m_Name: Wave 4
   m_EditorClassIdentifier: 
-  TimeToNextWave: 0
-  EnemiesInWave: []
+  TimeToNextWave: 290
+  EnemiesInWave:
+  - CurrentEnemy: {fileID: 11400000, guid: 94c3efed1bbf4794e9621efb46babae6, type: 2}
+    PopUpIndex: 2
+    TimeBetweenSpawns: 3
+    TimeToNextEnemies: 15
+    EnemiesAmount: 50
+  - CurrentEnemy: {fileID: 11400000, guid: 6d0e9bb15da2215479e524c005c6fc26, type: 2}
+    PopUpIndex: 0
+    TimeBetweenSpawns: 3
+    TimeToNextEnemies: 0
+    EnemiesAmount: 35

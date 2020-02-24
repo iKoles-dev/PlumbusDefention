@@ -14928,7 +14928,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 143110244, guid: 340a43a346ff020459678cbb862eb611, type: 3}
       propertyPath: _allWaves.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 143110244, guid: 340a43a346ff020459678cbb862eb611, type: 3}
       propertyPath: _waves
@@ -14942,6 +14942,26 @@ PrefabInstance:
       propertyPath: _winGame
       value: 
       objectReference: {fileID: 175818316}
+    - target: {fileID: 143110244, guid: 340a43a346ff020459678cbb862eb611, type: 3}
+      propertyPath: _allWaves.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b550e2fc3088054db76f75949dde4fc,
+        type: 2}
+    - target: {fileID: 143110244, guid: 340a43a346ff020459678cbb862eb611, type: 3}
+      propertyPath: _allWaves.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 32a71fda7fa2c404ebceafe7b41cd26d,
+        type: 2}
+    - target: {fileID: 143110244, guid: 340a43a346ff020459678cbb862eb611, type: 3}
+      propertyPath: _allWaves.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: a9fe5479d9b32964393cd4236f531b79,
+        type: 2}
+    - target: {fileID: 143110244, guid: 340a43a346ff020459678cbb862eb611, type: 3}
+      propertyPath: _allWaves.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fafdead98de6744da8bc6ee03a2a1ff,
+        type: 2}
     - target: {fileID: 3850033728454563172, guid: 340a43a346ff020459678cbb862eb611,
         type: 3}
       propertyPath: m_SortingLayerID

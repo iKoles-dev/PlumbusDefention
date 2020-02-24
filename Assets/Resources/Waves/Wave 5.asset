@@ -13,4 +13,14 @@ MonoBehaviour:
   m_Name: Wave 5
   m_EditorClassIdentifier: 
   TimeToNextWave: 0
-  EnemiesInWave: []
+  EnemiesInWave:
+  - CurrentEnemy: {fileID: 11400000, guid: 6d0e9bb15da2215479e524c005c6fc26, type: 2}
+    PopUpIndex: 0
+    TimeBetweenSpawns: 3
+    TimeToNextEnemies: 20
+    EnemiesAmount: 35
+  - CurrentEnemy: {fileID: 11400000, guid: 6d0e9bb15da2215479e524c005c6fc26, type: 2}
+    PopUpIndex: 0
+    TimeBetweenSpawns: 2
+    TimeToNextEnemies: 0
+    EnemiesAmount: 50
