@@ -18,11 +18,6 @@ public class BuyingTower : MonoBehaviour
         _towerSpot = GetComponentInParent<TowerSpot>();
         _buyButton = GetComponentInChildren<Button>();
     }
-
-    private void Update()
-    {
-        _buyButton.interactable = Player.Instance.PlayerMoney >= _tower.BuyingCost;
-    }
     public void BuyTower()
     {
         if (Player.Instance.PlayerMoney >= _tower.BuyingCost)

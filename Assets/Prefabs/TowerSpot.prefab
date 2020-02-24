@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3733786529950449572}
   - component: {fileID: 3733786529950449573}
   - component: {fileID: 3733786529950449574}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: TowerMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 3733786529950449568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 3733786531920562985}
   m_Father: {fileID: 3733786531430085790}
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 0, y: -13}
   m_SizeDelta: {x: 200, y: 37.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3733786529950449572
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 3733786530140934793}
   - component: {fileID: 3733786530140934799}
   - component: {fileID: 3733786530140934792}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,13 +231,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3733786530140934792}
-    characterCount: 3
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3733786530216246236}
   - component: {fileID: 3733786530216246178}
   - component: {fileID: 3733786530216246179}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,13 +386,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3733786530216246179}
-    characterCount: 3
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 3733786530271597210}
   - component: {fileID: 3733786530271597211}
   - component: {fileID: 3733786530271597204}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: LightningPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,10 +445,10 @@ RectTransform:
   m_Father: {fileID: 3733786531920562985}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.463486, y: -23.9}
-  m_SizeDelta: {x: 44.985394, y: 47.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 47.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5805013086052028052
 MonoBehaviour:
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 3733786530922651957}
   - component: {fileID: 3733786530922651958}
   - component: {fileID: 4778062072580005154}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,10 +558,10 @@ RectTransform:
   m_Father: {fileID: 3733786530271597205}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -19}
-  m_SizeDelta: {x: 44.985394, y: 38}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786530922651957
 CanvasRenderer:
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 3733786531171933901}
   - component: {fileID: 3733786531171933902}
   - component: {fileID: 3733786531171933903}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: MeteorPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,10 +689,10 @@ RectTransform:
   m_Father: {fileID: 3733786531920562985}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 157.44887, y: -23.9}
-  m_SizeDelta: {x: 44.985394, y: 47.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 47.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8584014292567448662
 MonoBehaviour:
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 3733786531225986269}
   - component: {fileID: 3733786531225986211}
   - component: {fileID: 3733786531225986268}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,10 +802,10 @@ RectTransform:
   m_Father: {fileID: 3733786531171933896}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -50.53}
-  m_SizeDelta: {x: 44.985394, y: 25.06}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 25.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531225986211
 CanvasRenderer:
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 3733786531346840062}
   - component: {fileID: 3733786531346840060}
   - component: {fileID: 3733786531346840061}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,10 +876,10 @@ RectTransform:
   m_Father: {fileID: 3733786531782865244}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -50.53}
-  m_SizeDelta: {x: 44.985394, y: 25.06}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 25.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531346840060
 CanvasRenderer:
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 3733786531357486031}
   - component: {fileID: 3733786531357486029}
   - component: {fileID: 3733786531357486030}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,13 +1049,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3733786531357486030}
-    characterCount: 3
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1084,7 +1084,7 @@ GameObject:
   - component: {fileID: 3733786531420297385}
   - component: {fileID: 3733786531420297386}
   - component: {fileID: 7550162595868123862}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: ControlBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1105,10 +1105,10 @@ RectTransform:
   m_Father: {fileID: 3733786531612111932}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -19}
-  m_SizeDelta: {x: 44.985394, y: 38}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531420297385
 CanvasRenderer:
@@ -1270,8 +1270,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -330996791
-  m_SortingLayer: 4
+  m_SortingLayerID: -268399433
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b7c9a02bd039aa41919fe21d11e3bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1334,7 +1334,7 @@ GameObject:
   - component: {fileID: 3733786531466709229}
   - component: {fileID: 3733786531466709235}
   - component: {fileID: 3733786531466709228}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,10 +1356,10 @@ RectTransform:
   m_Father: {fileID: 3733786531612111932}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -50.53}
-  m_SizeDelta: {x: 44.985394, y: 25.06}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 25.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531466709235
 CanvasRenderer:
@@ -1409,7 +1409,7 @@ GameObject:
   - component: {fileID: 3733786531498056878}
   - component: {fileID: 3733786531498056879}
   - component: {fileID: 3733786531498056872}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1430,10 +1430,10 @@ RectTransform:
   m_Father: {fileID: 3733786531920562985}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 189.97078, y: -10.385}
-  m_SizeDelta: {x: 20.058422, y: 20.77}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 20.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531498056878
 CanvasRenderer:
@@ -1537,7 +1537,7 @@ GameObject:
   - component: {fileID: 3733786531584758114}
   - component: {fileID: 3733786531584758115}
   - component: {fileID: 6486659967030975854}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,10 +1558,10 @@ RectTransform:
   m_Father: {fileID: 3733786531171933896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -19}
-  m_SizeDelta: {x: 44.985394, y: 38}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531584758114
 CanvasRenderer:
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 3733786531603411747}
   - component: {fileID: 3733786531603411804}
   - component: {fileID: 3733786531603411746}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1686,10 +1686,10 @@ RectTransform:
   m_Father: {fileID: 3733786531782865244}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -19}
-  m_SizeDelta: {x: 44.985394, y: 38}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531603411747
 CanvasRenderer:
@@ -1794,7 +1794,7 @@ GameObject:
   - component: {fileID: 3733786531612111873}
   - component: {fileID: 3733786531612111874}
   - component: {fileID: 3733786531612111875}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: ControlBallPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1817,10 +1817,10 @@ RectTransform:
   m_Father: {fileID: 3733786531920562985}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67.47809, y: -23.9}
-  m_SizeDelta: {x: 44.985394, y: 47.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 47.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8311546106856461130
 MonoBehaviour:
@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 3733786531627366322}
   - component: {fileID: 3733786531627366320}
   - component: {fileID: 3733786531627366321}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1930,10 +1930,10 @@ RectTransform:
   m_Father: {fileID: 3733786530271597205}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -50.53}
-  m_SizeDelta: {x: 44.985394, y: 25.06}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 25.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3733786531627366320
 CanvasRenderer:
@@ -1984,7 +1984,7 @@ GameObject:
   - component: {fileID: 3733786531782865185}
   - component: {fileID: 3733786531782865186}
   - component: {fileID: 3733786531782865187}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: BallPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,10 +2007,10 @@ RectTransform:
   m_Father: {fileID: 3733786531920562985}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.492697, y: -23.9}
-  m_SizeDelta: {x: 44.985394, y: 47.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 47.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3733786531782865184
 MonoBehaviour:
@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 3733786531797017191}
   - component: {fileID: 3733786531797017189}
   - component: {fileID: 3733786531797017190}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,13 +2219,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3733786531797017190}
-    characterCount: 3
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2254,7 +2254,7 @@ GameObject:
   - component: {fileID: 3733786531920562990}
   - component: {fileID: 3733786531920562991}
   - component: {fileID: 3733786531920562984}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
