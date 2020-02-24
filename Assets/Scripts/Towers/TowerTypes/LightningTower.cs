@@ -9,8 +9,7 @@ namespace Assets.Scripts.Towers
         public override void Shoot(EnemyController enemy, float damage, float radius)
         {
             _lighning.Play();
-            Collider2D[] allEnimiesInRange = Physics2D.OverlapCircleAll(transform.position, radius);
-            Debug.Log(allEnimiesInRange.Length);
+            Collider2D[] allEnimiesInRange = Physics2D.OverlapCircleAll(transform.position, radius*.5f);
             foreach (var enemyCollider in allEnimiesInRange)
             {
                 if (enemyCollider.gameObject.GetComponent<EnemyController>() != null)

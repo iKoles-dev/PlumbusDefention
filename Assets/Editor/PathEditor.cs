@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Assets.Scripts;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 [CustomEditor(typeof(PathCreator))]
@@ -145,10 +146,10 @@ public class PathEditor : Editor
         }
         return array;
     }
-    private void SetObjectDirty(UnityEngine.GameObject dirtyObject)
+    private void SetObjectDirty(GameObject dirtyObject)
     {
-        UnityEditor.EditorUtility.SetDirty(dirtyObject);
-        UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(dirtyObject.scene);
+        EditorUtility.SetDirty(dirtyObject);
+        EditorSceneManager.MarkSceneDirty(dirtyObject.scene);
     }
 }
 #endif

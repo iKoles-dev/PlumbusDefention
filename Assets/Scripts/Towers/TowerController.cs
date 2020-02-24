@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Assets.Scripts.Enums;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,7 +15,6 @@ namespace Assets.Scripts.Towers
         private BasicTower _towerControl;
         [HideInInspector] public Tower CurrentTower;
         public int Level;
-        private List<EnemyController> _enemiesInRange = new List<EnemyController>();
         private Transform _currentPosition;
 
         private void Awake()
@@ -25,7 +25,6 @@ namespace Assets.Scripts.Towers
         public void AddTowerPreferences(Tower tower)
         {
             CurrentTower = tower;
-            GetComponent<CircleCollider2D>().radius = CurrentTower.Upgrades[Level].Range;
             _range.localScale = _rangeScale * CurrentTower.Upgrades[Level].Range;
             StartCoroutine(TrackAndShoot());
         }
@@ -40,7 +39,6 @@ namespace Assets.Scripts.Towers
         {
             while (true)
             {
-                ClearEnemyListFromNull();
                 EnemyController nearestEnemy = GetNearestEnemy();
                 if (nearestEnemy != null)
                 {
@@ -53,26 +51,22 @@ namespace Assets.Scripts.Towers
                 }
             }
         }
-        private void ClearEnemyListFromNull()
-        {
-            for (int i = 0; i < _enemiesInRange.Count; i++)
-            {
-                if (_enemiesInRange[i] == null)
-                {
-                    _enemiesInRange.RemoveAt(i);
-                    i--;
-                    continue;
-                }
-
-            }
-        }
         private EnemyController GetNearestEnemy()
         {
-            if (_enemiesInRange.Count > 0)
+            Collider2D[] allCollidersInRange = Physics2D.OverlapCircleAll(_currentPosition.position, CurrentTower.Upgrades[Level].Range/2);
+            List<EnemyController> allEnemiesInRange = new List<EnemyController>();
+            foreach (var collider2D in allCollidersInRange)
             {
-                EnemyController nearestEnemy = _enemiesInRange[0];
+                if (collider2D.TryGetComponent<EnemyController>(out EnemyController enemy))
+                {
+                    allEnemiesInRange.Add(enemy);
+                }
+            }
+            if (allEnemiesInRange.Count > 0)
+            {
+                EnemyController nearestEnemy = allEnemiesInRange[0];
                 float nearestDistance = Vector3.Distance(_currentPosition.position, nearestEnemy.transform.position);
-                _enemiesInRange.ForEach(enemy =>
+                allEnemiesInRange.ForEach(enemy =>
                 {
 
                     if (enemy.State != EnemyStates.Die)
@@ -96,20 +90,6 @@ namespace Assets.Scripts.Towers
                 return null;
             }
 
-        }
-        private void OnTriggerEnter2D(Collider2D enteredCollider)
-        {
-            if (enteredCollider.GetComponent<EnemyController>()!=null)
-            {
-                _enemiesInRange.Add(enteredCollider.GetComponent<EnemyController>());
-            }
-        }
-        private void OnTriggerExit2D(Collider2D leftCollider)
-        {
-            if (leftCollider.GetComponent<EnemyController>() != null)
-            {
-                _enemiesInRange.Remove(leftCollider.GetComponent<EnemyController>());
-            }
         }
 
         public void OnPointerDown(PointerEventData eventData)

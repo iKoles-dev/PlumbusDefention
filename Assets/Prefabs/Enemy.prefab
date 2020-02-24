@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2096388115443670725}
   - component: {fileID: 7646751109518187407}
   - component: {fileID: 5297303361880885596}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingLayerID: -485847563
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 450c93c5f32aed74c92315070428df05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -133,9 +133,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.36, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.61
 --- !u!1 &2189256699201294232
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 5300606000245455344}
   - component: {fileID: 6553888435787740999}
   - component: {fileID: 4997297225161406139}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpawnGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4922,9 +4922,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 868810335
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -4959,7 +4959,7 @@ GameObject:
   - component: {fileID: 5342103168144737227}
   - component: {fileID: 6317401194883614812}
   - component: {fileID: 3558368723090333628}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5114,7 +5114,7 @@ GameObject:
   - component: {fileID: 2935865829600409086}
   - component: {fileID: 213161784373718963}
   - component: {fileID: 3458578055184954286}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5187,7 +5187,7 @@ GameObject:
   - component: {fileID: 6499457095450436135}
   - component: {fileID: 5547787580192242479}
   - component: {fileID: 7601450365259478983}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5261,7 +5261,7 @@ GameObject:
   - component: {fileID: 8324175216878006442}
   - component: {fileID: 6461106899805981567}
   - component: {fileID: 7698168022813377559}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5308,8 +5308,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 21
+  m_SortingLayerID: -485847563
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &6461106899805981567
 MonoBehaviour:

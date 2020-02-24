@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3733786529950449572}
   - component: {fileID: 3733786529950449573}
   - component: {fileID: 3733786529950449574}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TowerMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 3733786529950449568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 3733786531920562985}
   m_Father: {fileID: 3733786531430085790}
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4.73}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 200, y: 37.299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3733786529950449572
@@ -57,8 +57,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingLayerID: -1117942949
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3733786529950449573
 MonoBehaviour:
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 3733786530140934793}
   - component: {fileID: 3733786530140934799}
   - component: {fileID: 3733786530140934792}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3733786530216246236}
   - component: {fileID: 3733786530216246178}
   - component: {fileID: 3733786530216246179}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 3733786530271597210}
   - component: {fileID: 3733786530271597211}
   - component: {fileID: 3733786530271597204}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LightningPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 3733786530922651957}
   - component: {fileID: 3733786530922651958}
   - component: {fileID: 4778062072580005154}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 3733786531171933901}
   - component: {fileID: 3733786531171933902}
   - component: {fileID: 3733786531171933903}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MeteorPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 3733786531225986269}
   - component: {fileID: 3733786531225986211}
   - component: {fileID: 3733786531225986268}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 3733786531346840062}
   - component: {fileID: 3733786531346840060}
   - component: {fileID: 3733786531346840061}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 3733786531357486031}
   - component: {fileID: 3733786531357486029}
   - component: {fileID: 3733786531357486030}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1084,7 @@ GameObject:
   - component: {fileID: 3733786531420297385}
   - component: {fileID: 3733786531420297386}
   - component: {fileID: 7550162595868123862}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ControlBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 3733786531430085791}
   - component: {fileID: 3733786531430085784}
   - component: {fileID: 3733786531430085789}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TowerSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1228,7 @@ Transform:
   m_GameObject: {fileID: 3733786531430085785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.009, y: -0.399, z: 0}
-  m_LocalScale: {x: 0.1634512, y: 0.1634512, z: 0.1634512}
+  m_LocalScale: {x: 0.070011206, y: 0.070011206, z: 0.070011206}
   m_Children:
   - {fileID: 3733786529950449575}
   m_Father: {fileID: 0}
@@ -1270,10 +1270,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 7dcab9af7c5c6cd41a3572cfaa08a929, type: 3}
+  m_SortingLayerID: -330996791
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6b7c9a02bd039aa41919fe21d11e3bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1314,14 +1314,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.95, y: 3.65}
+    oldSize: {x: 12.77, y: 10.19}
     newSize: {x: 4.95, y: 3.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.95, y: 3.65}
+  m_Size: {x: 12.51, y: 9.94}
   m_EdgeRadius: 0
 --- !u!1 &3733786531466709230
 GameObject:
@@ -1334,7 +1334,7 @@ GameObject:
   - component: {fileID: 3733786531466709229}
   - component: {fileID: 3733786531466709235}
   - component: {fileID: 3733786531466709228}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1409,7 @@ GameObject:
   - component: {fileID: 3733786531498056878}
   - component: {fileID: 3733786531498056879}
   - component: {fileID: 3733786531498056872}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1537,7 +1537,7 @@ GameObject:
   - component: {fileID: 3733786531584758114}
   - component: {fileID: 3733786531584758115}
   - component: {fileID: 6486659967030975854}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 3733786531603411747}
   - component: {fileID: 3733786531603411804}
   - component: {fileID: 3733786531603411746}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1794,7 @@ GameObject:
   - component: {fileID: 3733786531612111873}
   - component: {fileID: 3733786531612111874}
   - component: {fileID: 3733786531612111875}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ControlBallPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 3733786531627366322}
   - component: {fileID: 3733786531627366320}
   - component: {fileID: 3733786531627366321}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1984,7 +1984,7 @@ GameObject:
   - component: {fileID: 3733786531782865185}
   - component: {fileID: 3733786531782865186}
   - component: {fileID: 3733786531782865187}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BallPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 3733786531797017191}
   - component: {fileID: 3733786531797017189}
   - component: {fileID: 3733786531797017190}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2254,7 +2254,7 @@ GameObject:
   - component: {fileID: 3733786531920562990}
   - component: {fileID: 3733786531920562991}
   - component: {fileID: 3733786531920562984}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

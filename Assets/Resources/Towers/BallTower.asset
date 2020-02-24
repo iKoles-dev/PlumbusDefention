@@ -20,33 +20,33 @@ MonoBehaviour:
   Upgrades:
   - Cost: 50
     Range: 3
-    ShootInterval: 3
-    Damage: 3
-    DamageRadius: 1
+    ShootInterval: 2
+    Damage: 1
+    DamageRadius: 0.5
     SellCost: 25
   - Cost: 100
     Range: 3.3
-    ShootInterval: 2.8
-    Damage: 5
-    DamageRadius: 1.2
+    ShootInterval: 1.9
+    Damage: 2
+    DamageRadius: 0.5
     SellCost: 50
   - Cost: 200
     Range: 3.7
-    ShootInterval: 2.6
-    Damage: 7
-    DamageRadius: 1.5
+    ShootInterval: 1.8
+    Damage: 3
+    DamageRadius: 0.6
     SellCost: 100
   - Cost: 400
     Range: 4
-    ShootInterval: 2
-    Damage: 9
-    DamageRadius: 1.8
+    ShootInterval: 1.6
+    Damage: 4
+    DamageRadius: 0.7
     SellCost: 200
   - Cost: 600
     Range: 4.5
     ShootInterval: 1.5
-    Damage: 13
-    DamageRadius: 2
+    Damage: 5
+    DamageRadius: 0.8
     SellCost: 300
   ShootAnimation: {fileID: 0}
   TowerPrefab: {fileID: 5613780582205250435, guid: 4b764ef43fc734640849cd91d98c7f0b,

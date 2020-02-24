@@ -12,12 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd761339b471a4da9da708d175cfd5, type: 3}
   m_Name: MeteorTower
   m_EditorClassIdentifier: 
-  FirstTowerUpgrade: {fileID: 0}
-  SecondTowerUpgrade: {fileID: 0}
-  LevelToFirstUpgrade: 0
-  ThirdTowerUpgrade: {fileID: 0}
-  LevelToSecondUpgrade: 0
-  Upgrades: []
+  FirstTowerUpgrade: {fileID: 21300000, guid: 40176ba0c03d2064f9e5024d7bd47aac, type: 3}
+  SecondTowerUpgrade: {fileID: 21300000, guid: 336f7762bf1c13346a41933ae24e3cdc, type: 3}
+  LevelToFirstUpgrade: 2
+  ThirdTowerUpgrade: {fileID: 21300000, guid: b0a4445c50b3ea94882cb69d7687bcd0, type: 3}
+  LevelToSecondUpgrade: 5
+  Upgrades:
+  - Cost: 500
+    Range: 4
+    ShootInterval: 4
+    Damage: 10
+    DamageRadius: 1.5
+    SellCost: 250
+  - Cost: 800
+    Range: 4.3
+    ShootInterval: 3.8
+    Damage: 15
+    DamageRadius: 1.8
+    SellCost: 400
+  - Cost: 1100
+    Range: 4.6
+    ShootInterval: 3.5
+    Damage: 20
+    DamageRadius: 2
+    SellCost: 550
+  - Cost: 1400
+    Range: 5
+    ShootInterval: 3.2
+    Damage: 24
+    DamageRadius: 2.2
+    SellCost: 700
+  - Cost: 1800
+    Range: 5.5
+    ShootInterval: 3
+    Damage: 26
+    DamageRadius: 2.5
+    SellCost: 900
   ShootAnimation: {fileID: 0}
-  TowerPrefab: {fileID: 0}
-  BuyingCost: 0
+  TowerPrefab: {fileID: 2317898149857404573, guid: 8010f61ff13c62148a3d242181548103,
+    type: 3}
+  BuyingCost: 500

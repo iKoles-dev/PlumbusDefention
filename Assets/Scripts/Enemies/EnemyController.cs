@@ -109,7 +109,7 @@ namespace Assets.Scripts
         private IEnumerator Damage()
         {
             SetAnimation();
-            yield return new WaitForSeconds(1.2f);
+            yield return new WaitForSeconds(0.5f);
             if (State != EnemyStates.Die)
             {
                 State = EnemyStates.Walk;
@@ -119,7 +119,7 @@ namespace Assets.Scripts
         private IEnumerator Die()
         {
             SetAnimation();
-            Player.Instance.ChangeMoney(_enemy.Health/3+(Random.Range(0,2)-1)); //Money bonus
+            Player.Instance.ChangeMoney((int)(_enemy.Health*1.2f+(Random.Range(0,2)-1))); //Money bonus
             yield return new WaitForSeconds(1);
             Destroy(gameObject);
         }

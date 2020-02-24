@@ -12,12 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd761339b471a4da9da708d175cfd5, type: 3}
   m_Name: LightningTower
   m_EditorClassIdentifier: 
-  FirstTowerUpgrade: {fileID: 0}
-  SecondTowerUpgrade: {fileID: 0}
-  LevelToFirstUpgrade: 0
-  ThirdTowerUpgrade: {fileID: 0}
-  LevelToSecondUpgrade: 0
-  Upgrades: []
+  FirstTowerUpgrade: {fileID: 21300000, guid: e5b5639134cd16247a0f5f79f3ff1ace, type: 3}
+  SecondTowerUpgrade: {fileID: 21300000, guid: 990a712839747a840995471bd9575224, type: 3}
+  LevelToFirstUpgrade: 2
+  ThirdTowerUpgrade: {fileID: 21300000, guid: b5fe0cb74128dfb45949c3b76c8414ac, type: 3}
+  LevelToSecondUpgrade: 5
+  Upgrades:
+  - Cost: 200
+    Range: 3.5
+    ShootInterval: 3
+    Damage: 2
+    DamageRadius: 3.5
+    SellCost: 100
+  - Cost: 400
+    Range: 3.7
+    ShootInterval: 2.8
+    Damage: 5
+    DamageRadius: 3.7
+    SellCost: 200
+  - Cost: 650
+    Range: 4
+    ShootInterval: 2.6
+    Damage: 7
+    DamageRadius: 4
+    SellCost: 325
+  - Cost: 900
+    Range: 4.5
+    ShootInterval: 2.4
+    Damage: 10
+    DamageRadius: 4.5
+    SellCost: 450
+  - Cost: 1100
+    Range: 5
+    ShootInterval: 2.2
+    Damage: 13
+    DamageRadius: 5
+    SellCost: 550
   ShootAnimation: {fileID: 0}
-  TowerPrefab: {fileID: 0}
-  BuyingCost: 0
+  TowerPrefab: {fileID: 2317898149857404573, guid: fdbc21138edd8f34d9aae40315745305,
+    type: 3}
+  BuyingCost: 200

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3850033728454563179}
   - component: {fileID: 3850033728454563173}
   - component: {fileID: 3850033728454563172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UpperSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 3850033728461017800}
   - component: {fileID: 3850033728461017802}
   - component: {fileID: 3850033728461017801}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9575,7 +9575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3850033728517328114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9611,7 +9611,7 @@ GameObject:
   - component: {fileID: 3850033728524562800}
   - component: {fileID: 3850033728524562802}
   - component: {fileID: 3850033728524562801}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14364,7 +14364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3850033729897781904}
   - component: {fileID: 3850033729897781905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14446,7 +14446,7 @@ GameObject:
   - component: {fileID: 3850033729945035182}
   - component: {fileID: 3850033729945035183}
   - component: {fileID: 143110244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14495,8 +14495,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641f935b96b78eb408e5354a37fcc420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToFirstSpawn: 5
+  _timeToFirstSpawn: 15
   _waves: {fileID: 0}
   _nextWave: {fileID: 0}
   _allWaves:
   - {fileID: 11400000, guid: 9ff38f0fd1e364642a65eb3516ac8d64, type: 2}
+  - {fileID: 11400000, guid: 6b550e2fc3088054db76f75949dde4fc, type: 2}
+  - {fileID: 11400000, guid: 32a71fda7fa2c404ebceafe7b41cd26d, type: 2}
+  - {fileID: 11400000, guid: a9fe5479d9b32964393cd4236f531b79, type: 2}
+  - {fileID: 11400000, guid: 2fafdead98de6744da8bc6ee03a2a1ff, type: 2}

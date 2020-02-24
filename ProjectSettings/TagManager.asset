@@ -17,10 +17,10 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
-  - 
-  - 
+  - TowerAboveRoad
+  - Enemy
+  - TowerUnderRoad
+  - Interface
   - 
   - 
   - 
@@ -39,9 +39,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Fire
-    uniqueID: 3804908061
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: AboveGround
+    uniqueID: 868810335
+    locked: 0
+  - name: TowerAboveRoad
+    uniqueID: 4026567863
+    locked: 0
+  - name: Enemy
+    uniqueID: 3809119733
+    locked: 0
+  - name: TowerUnderRoad
+    uniqueID: 3963970505
+    locked: 0
+  - name: Interface
+    uniqueID: 3177024347
+    locked: 0
+  - name: Fire
+    uniqueID: 3804908061
     locked: 0

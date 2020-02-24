@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Assets.Editors
@@ -33,7 +34,12 @@ namespace Assets.Editors
             GUILayout.BeginHorizontal("box");
             GUILayout.Label("Wave Editor");
             GUILayout.EndHorizontal();
-            _wave.TimeToNextWave = EditorGUILayout.FloatField("Time to next wave",_wave.TimeToNextWave);
+            int minTimeToNextWave = 0;
+            _wave.EnemiesInWave.ForEach(enemy =>
+                {
+                    minTimeToNextWave += (int) (enemy.EnemiesAmount * enemy.TimeBetweenSpawns + enemy.TimeToNextEnemies);
+                });
+            _wave.TimeToNextWave = EditorGUILayout.FloatField($"Time to next wave (min: {minTimeToNextWave})",_wave.TimeToNextWave);
             for (int i = 0; i < _wave.EnemiesInWave.Count; i++)
             {
                 GUILayout.BeginVertical("box");
@@ -51,6 +57,10 @@ namespace Assets.Editors
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
+            if (UnityEngine.GUI.changed)
+            {
+                EditorSceneManager.MarkSceneDirty(Player.Instance.gameObject.scene);
+            }
             serializedObject.ApplyModifiedProperties();
         }
 
@@ -79,6 +89,11 @@ namespace Assets.Editors
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
+        }
+        private void SetObjectDirty(GameObject dirtyObject)
+        {
+            EditorUtility.SetDirty(dirtyObject);
+            EditorSceneManager.MarkSceneDirty(dirtyObject.scene);
         }
     }
 }

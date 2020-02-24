@@ -54,7 +54,6 @@ public class UpgradeMenu : MonoBehaviour
         else
         {
             _upgradeCost.text = "Upgraded";
-            _upgradeButton.interactable = false;
         }
 
         _sellCost.text = "Sell: " + _towerController.CurrentTower.Upgrades[_towerController.Level].SellCost;

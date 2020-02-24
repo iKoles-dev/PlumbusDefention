@@ -30,6 +30,7 @@ public class BuyingTower : MonoBehaviour
             Player.Instance.ChangeMoney(-_tower.BuyingCost);
             GameObject newTower = Instantiate(_tower.TowerPrefab, _towerSpot.transform.position, Quaternion.identity);
             newTower.GetComponent<TowerController>().AddTowerPreferences(_tower);
+            newTower.GetComponent<SpriteRenderer>().sortingLayerName = transform.parent.gameObject.transform.parent.transform.parent.GetComponent<SpriteRenderer>().sortingLayerName;
             Destroy(_towerSpot.gameObject);
         }
     }
